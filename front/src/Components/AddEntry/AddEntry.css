@@ -1,0 +1,9 @@
+#add-entry {
+    display: flex;
+    flex-direction: column;
+}
+
+#entry-form {
+    display: flex;
+    flex-direction: column;
+}

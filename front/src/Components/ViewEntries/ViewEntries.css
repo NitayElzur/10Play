@@ -1,0 +1,20 @@
+#view-entries {
+    text-align: center;
+}
+
+#keys {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.row {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+}
+
+.item {
+    padding: 5px;
+}
