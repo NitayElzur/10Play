@@ -14,8 +14,8 @@ const port = process.env.PORT || 3000;
 app.use('/data', dataRoute)
 
 app.get('/', (req: Request, res: Response) => {
-    res.send('Hello World');
-    // res.json({query: req.query})
+    // res.send('Hello World');
+    res.send(process.env.AWS_BUCKET);
 })
 
 app.listen(port, () => {
