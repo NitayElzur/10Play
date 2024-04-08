@@ -3,14 +3,13 @@ import { Request, Response } from "express";
 const client = new S3Client({ region: process.env.AWS_REGION });
 
 export const send = async (req: Request, res: Response) => {
-    const { key, body } = req.body;
-    const command = new PutObjectCommand({
-        Bucket: process.env.AWS_BUCKET,
-        Key: key,
-        Body: body
-    })
-
     try {
+        const { key, body } = req.body;
+        const command = new PutObjectCommand({
+            Bucket: process.env.AWS_BUCKET,
+            Key: key,
+            Body: body
+        })
         const response = await client.send(command)
         return res.status(200).send(response)
     }
@@ -57,11 +56,7 @@ export const fetchAll = async (req: Request, res: Response) => {
                 i += paginateBy - 1
             }
         }
-        // const contentList = Contents?.map(v => ({key: v.Key}));
-
         return res.status(200).send(contentList)
-
-
     }
     catch (err) {
         return res.status(500).send(err)
