@@ -13,7 +13,7 @@ function ViewEntries() {
         <div id="view-entries">
             All objects key whithin bucket:
             <div id="keys">
-                {objects?.map((row, index) => {
+                {objects && objects?.map((row, index) => {
                     return (
                         <div key={index} className="row">
                             {row?.map((item, jndex) => {
