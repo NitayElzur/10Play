@@ -16,7 +16,7 @@ function ViewEntries() {
                 {objects?.map((row, index) => {
                     return (
                         <div key={index} className="row">
-                            {row.map((item, jndex) => {
+                            {row?.map((item, jndex) => {
                                 return (
                                     <div key={jndex} className="item">{item}</div>
                                 )
