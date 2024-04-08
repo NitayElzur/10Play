@@ -7,6 +7,7 @@ function ViewEntries() {
     useEffect(() => {
         !objects && axios.get(fetchAll)
             .then(({ data }) => setObjects(data))
+            .catch(err => console.log(err))
     }, [objects])
     return (
         <div id="view-entries">
