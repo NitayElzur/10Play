@@ -1,4 +1,4 @@
-Provided above is both the frontend and backend of the application.
+Provided above is both the frontend and backend of the application.  
 In order to use the applicaiton with aws services you need to do the following:
 -Creating a key pair for ssh use
 -Creating a new project through CloudFormation and using the provided template (make sure to replace items like the keypair and native ip address inorder to recieve full access)
