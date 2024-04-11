@@ -17,10 +17,10 @@ cd back/
 npm i  
 (inorder to download all the node.js packages)  
 open a new terminal window and connect it to the ec2 instance  
-Frontend:  
+Frontend: (from the front/ directory)  
 export VITE_SERVER=http://<ec2-public-ipv4-address>:3000/  
 npm run dev -- --host (this allows outside connections to the frontend)  
-Backend:  
+Backend: (from the back/ directory)  
 export AWS_BUCKET=<bucket-name>  
 export AWS_REGION=<region-of-bucket>  
 npx ts-node server.ts (for first time running you will be prompted to download more packages, accept them)  
